@@ -19,7 +19,7 @@ For random variables $\theta$ and $y$ with densities,
 $$
 p(\theta \mid y) = \frac{p(y \mid \theta)\, p(\theta)}{p(y)}, \qquad p(y) = \int p(y \mid \theta)\, p(\theta)\, d\theta .
 $$
-Prior $p(\theta)$; likelihood $p(y \mid \theta)$ read as a function of $\theta$; evidence (marginal likelihood) $p(y)$; posterior $p(\theta \mid y)$.
+Prior $p(\theta)$; [[likelihood]] $p(y \mid \theta)$ read as a function of $\theta$; evidence (marginal likelihood) $p(y)$; posterior $p(\theta \mid y)$.
 
 ## Key results
 - **Sequential updating.** If $y_1 \perp y_2 \mid \theta$, yesterday's posterior is today's prior: $p(\theta \mid y_{1:2}) \propto p(y_2 \mid \theta)\, p(\theta \mid y_1)$.
