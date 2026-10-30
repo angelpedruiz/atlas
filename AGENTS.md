@@ -7,6 +7,9 @@ understanding evolved; notes themselves never carry dates or "updated" logs.
 
 Tooling: `python3 tools/atlas.py <command>` (stdlib only). Run `--help` for details.
 
+`docs/` holds what Angel and agents have agreed: `purpose.md` is the goal, and
+`status.md` tracks the repo against it. Change `purpose.md` only with Angel's agreement.
+
 ## Invariants
 
 1. **One concept, one file.** `concepts/<slug>.md`, slug = kebab-case of the
@@ -102,6 +105,9 @@ own concept that would be linked from ~3 other places, split it out.
 - **Before committing.** `atlas lint` must pass (the pre-commit hook runs it).
 
 ## Commits
+
+Commit every change, and update `docs/`, `README.md` and this file in the same commit
+if the change affects them, so the docs always describe the current project.
 
 One logical change per commit. Message format: `<verb>(<slug>): <summary>`, with
 verbs `add`, `refine`, `link`, `merge`, `rename`, `notation`, `tools`.

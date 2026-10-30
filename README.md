@@ -7,6 +7,7 @@ Markdown + LaTeX for content, Git for the history of how understanding evolved.
 ## Layout
 
 ```
+docs/            agreed project docs: purpose.md (the goal), status.md (where we are)
 concepts/        one file per concept: <slug>.md   (the whole graph lives here)
 notation/        house notation every note follows
 templates/       starter concept template, adapt per note (Obsidian core Templates plugin)
