@@ -41,7 +41,10 @@ For a linear system penalised quadratically on state deviation and control effor
 - **Derivation.** Assume $V_{t+1}(x) = x^\top P_{t+1} x$, substitute into the Bellman equation, minimise the resulting quadratic in $u$: the minimiser is linear in $x$ and $V_t$ is again quadratic. Induction closes.
 - **Infinite horizon.** If $(A, B)$ is stabilisable and $(A, Q^{1/2})$ detectable, $P_t \to P$, the stabilising solution of the DARE, and $A - BF$ is Schur stable.
 - **Certainty equivalence.** Additive Gaussian process noise leaves $F$ unchanged (only adds a constant to the cost). With noisy partial observations, the optimal controller is a Kalman filter feeding LQR, designed separately: [[linear-quadratic-gaussian]].
-- **Continuous time.** $A^\top P + PA - PBR^{-1}B^\top P + Q = 0$, $u = -R^{-1}B^\top P x$.
+- **Continuous time.**
+  $$
+  A^\top P + PA - PBR^{-1}B^\top P + Q = 0, \qquad u = -R^{-1}B^\top P x .
+  $$
 
 ## Connections
 - The rare case where the [[bellman-equation]] is solved exactly in closed form.

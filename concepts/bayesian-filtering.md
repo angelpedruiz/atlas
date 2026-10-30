@@ -34,7 +34,10 @@ A hidden state evolves and we see noisy glimpses of it. Keep a belief over the s
 
 ## Key results
 - Closed form only in special cases: linear-Gaussian gives the [[kalman-filter]]; a finite state space gives the forward algorithm of the [[hidden-markov-model]]. Otherwise approximate: [[extended-kalman-filter]], [[particle-filter]].
-- **Prediction-error decomposition.** The normalisers multiply to the marginal likelihood, $p(y_{1:T}) = \prod_{t} p(y_t \mid y_{1:t-1})$, which is how model parameters are fitted.
+- **Prediction-error decomposition.** The normalisers multiply to the marginal likelihood, which is how model parameters are fitted:
+  $$
+  p(y_{1:T}) = \prod_{t} p(y_t \mid y_{1:t-1}).
+  $$
 - Smoothing $p(x_t \mid y_{1:T})$ needs an extra backward pass ([[rts-smoother]] in the linear-Gaussian case).
 
 ## Connections

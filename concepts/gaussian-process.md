@@ -25,7 +25,11 @@ if for every finite $X = \{x_1, \dots, x_n\}$, $f_X \sim \mathcal{N}(m_X, K_{XX}
 A prior over functions specified only by how function values co-vary: the kernel says "inputs that are similar have similar outputs". Any finite set of function values is jointly Gaussian, so learning from data is just conditioning a big Gaussian, and the posterior comes with calibrated error bars for free.
 
 ## Regression
-With $y = f_X + \varepsilon$, $\varepsilon \sim \mathcal{N}(0, \sigma^2 I)$ and $k_{*X} = [k(x_*, x_1), \dots, k(x_*, x_n)]$:
+Observe $y = f_X + \varepsilon$ with $\varepsilon \sim \mathcal{N}(0, \sigma^2 I)$, and write
+$$
+k_{*X} = [k(x_*, x_1), \dots, k(x_*, x_n)].
+$$
+Then
 $$
 \mu_*(x_*) = m(x_*) + k_{*X}(K_{XX} + \sigma^2 I)^{-1}(y - m_X),
 $$
@@ -42,7 +46,15 @@ $$
 $$
 
 ## Connections
-- **Equivalent to [[kernel-ridge-regression]] for the posterior mean.** KRR solves $\min_{f \in \mathcal{H}_k} \sum_i (y_i - f(x_i))^2 + \lambda \lVert f \rVert_{\mathcal{H}_k}^2$, giving $\hat f(x_*) = k_{*X}(K_{XX} + \lambda I)^{-1} y$. With $m = 0$ and $\lambda = \sigma^2$ this is $\mu_*$. Scope: the mean only; the GP adds $\sigma_*^2$, KRR adds the regularisation reading.
+- **Equivalent to [[kernel-ridge-regression]] for the posterior mean.** KRR solves
+  $$
+  \min_{f \in \mathcal{H}_k} \sum_i (y_i - f(x_i))^2 + \lambda \lVert f \rVert_{\mathcal{H}_k}^2,
+  $$
+  giving
+  $$
+  \hat f(x_*) = k_{*X}(K_{XX} + \lambda I)^{-1} y.
+  $$
+  With $m = 0$ and $\lambda = \sigma^2$ this is $\mu_*$. Scope: the mean only; the GP adds $\sigma_*^2$, KRR adds the regularisation reading.
 - *Kriging* (geostatistics) is the same object under another name, kept as an alias.
 - **Analogous to the [[kalman-filter]]**: for 1-D inputs and Matérn-type kernels the GP is the output of a linear SDE, and Kalman filtering + smoothing gives the same posterior in $O(n)$.
 - The surrogate model in [[bayesian-optimization]].

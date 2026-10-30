@@ -27,7 +27,10 @@ Prior $p(\theta)$; [[likelihood]] $p(y \mid \theta)$ read as a function of $\the
 We usually know how data arise from a hypothesis, but want the reverse: how plausible each hypothesis is given the data. The posterior is the prior reweighted by how well each hypothesis explains what was observed, then renormalised.
 
 ## Key results
-- **Sequential updating.** If $y_1 \perp y_2 \mid \theta$, yesterday's posterior is today's prior: $p(\theta \mid y_{1:2}) \propto p(y_2 \mid \theta)\, p(\theta \mid y_1)$.
+- **Sequential updating.** If $y_1 \perp y_2 \mid \theta$, yesterday's posterior is today's prior:
+  $$
+  p(\theta \mid y_{1:2}) \propto p(y_2 \mid \theta)\, p(\theta \mid y_1).
+  $$
 - **Conjugacy.** When prior and likelihood come from matching families the posterior stays in the family, and the update is a parameter map instead of an integral.
 - **The evidence** does not affect the posterior's shape, but it is the quantity used to compare models and fit hyperparameters ([[marginal-likelihood]]).
 

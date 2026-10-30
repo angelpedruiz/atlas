@@ -35,7 +35,11 @@ Observing part of a jointly Gaussian vector moves the mean of the rest along the
 $$
 x \mid y \sim \mathcal{N}\big(\mu + K(y - C\mu),\ (I - KC)P\big), \qquad K = PC^\top (CPC^\top + R)^{-1}.
 $$
-- **Precision form.** With $\Lambda = \Sigma^{-1}$, $\Sigma_{a\mid b} = \Lambda_{aa}^{-1}$ and $\mu_{a\mid b} = \mu_a - \Lambda_{aa}^{-1}\Lambda_{ab}(b - \mu_b)$. Conditioning is easy in precision form; marginalising is easy in covariance form.
+- **Precision form.** With $\Lambda = \Sigma^{-1}$,
+  $$
+  \Sigma_{a\mid b} = \Lambda_{aa}^{-1}, \qquad \mu_{a\mid b} = \mu_a - \Lambda_{aa}^{-1}\Lambda_{ab}(b - \mu_b).
+  $$
+  Conditioning is easy in precision form; marginalising is easy in covariance form.
 
 ## Connections
 - This is [[bayes-rule]] in closed form: a Gaussian prior with a linear-Gaussian likelihood is conjugate.

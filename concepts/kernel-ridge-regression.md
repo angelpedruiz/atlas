@@ -25,7 +25,10 @@ $$
 Fit a function to data while paying for its complexity, where the kernel decides what complex means. Even though the search runs over a possibly infinite-dimensional function space, the answer only ever needs one weight per training point, so the problem reduces to a linear solve.
 
 ## Key results
-- Representer theorem: $\hat f(x_*) = \sum_{i=1}^n \alpha_i\, k(x_*, x_i)$ with $\alpha = (K_{XX} + \lambda I)^{-1} y$, so $\hat f(x_*) = k_{*X}(K_{XX} + \lambda I)^{-1} y$.
+- Representer theorem:
+  $$
+  \hat f(x_*) = \sum_{i=1}^n \alpha_i\, k(x_*, x_i), \qquad \alpha = (K_{XX} + \lambda I)^{-1} y .
+  $$
 - Fitting costs $O(n^3)$ in the number of data points, whatever the dimension of the feature space.
 - A linear kernel recovers ordinary ridge regression.
 

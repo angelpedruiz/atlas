@@ -38,9 +38,15 @@ The tail of an optimal plan is itself optimal from wherever it starts. So the va
 
 ## Key results
 - The Bellman operator $\mathcal{T}$ is a $\gamma$-contraction in $\lVert\cdot\rVert_\infty$: unique fixed point $V^*$, and value iteration converges geometrically (Banach).
-- Policy evaluation is linear: $V^\pi = \ell_\pi + \gamma \mathcal{P}_\pi V^\pi \Rightarrow V^\pi = (I - \gamma \mathcal{P}_\pi)^{-1}\ell_\pi$.
+- Policy evaluation is linear:
+  $$
+  V^\pi = \ell_\pi + \gamma \mathcal{P}_\pi V^\pi \;\Rightarrow\; V^\pi = (I - \gamma \mathcal{P}_\pi)^{-1}\ell_\pi .
+  $$
 - Value iteration, policy iteration and [[q-learning]] are all ways to find or approximate the fixed point.
-- Continuous-time limit: the [[hamilton-jacobi-bellman-equation]], $-\partial_t V = \min_u \{ \ell(x, u) + \nabla_x V^\top f(x, u) \}$.
+- Continuous-time limit: the [[hamilton-jacobi-bellman-equation]]:
+  $$
+  -\partial_t V = \min_u \{ \ell(x, u) + \nabla_x V^\top f(x, u) \}.
+  $$
 
 ## Connections
 - [[linear-quadratic-regulator]]: the special case with a closed-form solution (quadratic $V$).
