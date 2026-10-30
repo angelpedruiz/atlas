@@ -13,7 +13,7 @@ sources:
 # Bayesian filtering
 
 $$
-\LARGE
+\Large
 p(\underbrace{x_t}_{\text{hidden state}} \mid \underbrace{y_{1:t}}_{\text{measurements so far}})
 $$
 

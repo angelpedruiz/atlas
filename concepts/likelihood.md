@@ -11,7 +11,7 @@ requires: []
 
 **Definition.** Given a model $p(y \mid \theta)$ and observed data $y$, the *likelihood* is the function of the parameter
 $$
-\LARGE
+\Large
 \theta \;\mapsto\; p(\underbrace{y}_{\text{observation}} \mid \underbrace{\theta}_{\text{parameter}})
 $$
 with $y$ held fixed. It need not integrate to 1 over $\theta$.

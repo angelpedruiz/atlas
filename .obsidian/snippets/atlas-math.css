@@ -1,3 +1,10 @@
+/* inline maths */
 .math {
   font-size: 1.15em;
+}
+
+/* display maths; wide equations scroll instead of spilling out */
+.math.math-block {
+  font-size: 1.35em;
+  overflow-x: auto;
 }

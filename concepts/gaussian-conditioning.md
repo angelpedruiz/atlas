@@ -12,7 +12,6 @@ sources:
 # Gaussian conditioning
 
 $$
-\large
 a \mid b \sim \mathcal{N}\big(\underbrace{\mu_a + \Sigma_{ab}\Sigma_{bb}^{-1}(b - \mu_b)}_{\text{shifted mean}},\ \underbrace{\Sigma_{aa} - \Sigma_{ab}\Sigma_{bb}^{-1}\Sigma_{ba}}_{\text{reduced covariance}}\big)
 $$
 

@@ -14,7 +14,8 @@ commit as any change that moves a line here.
   format; the other notes still have a `## Definition` section.
 - Plain-text Git repo, with history as the record of understanding, public at
   <https://github.com/angelpedruiz/atlas>.
-- Obsidian vault configuration for editing, with a CSS snippet that enlarges all maths.
+- Obsidian vault configuration for editing, with a CSS snippet that sets the maths size
+  (inline 1.15em, display 1.35em).
 - CLI (`tools/atlas.py`) to search, create, inspect and rename concepts, with a
   JSON export (`atlas graph`). It has no command yet to add a link or edit a note.
 

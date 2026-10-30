@@ -16,7 +16,7 @@ sources:
 # Kalman filter
 
 $$
-\LARGE
+\Large
 x_t \mid y_{1:t} \sim \mathcal{N}(\underbrace{\hat x_{t\mid t}}_{\text{estimate}},\ \underbrace{P_{t\mid t}}_{\text{covariance}})
 $$
 

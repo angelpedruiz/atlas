@@ -12,7 +12,7 @@ sources:
 # Bayes' rule
 
 $$
-\LARGE
+\Large
 \underbrace{p(\theta \mid y)}_{\text{posterior}} = \frac{\overbrace{p(y \mid \theta)}^{\text{likelihood}}\; \overbrace{p(\theta)}^{\text{prior}}}{\underbrace{p(y)}_{\text{evidence}}}
 $$
 
@@ -36,4 +36,3 @@ We usually know how data arise from a hypothesis, but want the reverse: how plau
 - The Gaussian–linear conjugate pair is [[gaussian-conditioning]], which is where most closed-form Bayesian computations in estimation and GPs come from.
 - When $p(y)$ is intractable, the posterior is approximated instead, e.g. by [[variational-inference]].
 
-## Open questions

@@ -15,7 +15,7 @@ sources:
 # Linear-quadratic regulator
 
 $$
-\LARGE
+\Large
 u_t = -\underbrace{F_t}_{\text{feedback gain}}\ \underbrace{x_t}_{\text{state}}
 $$
 

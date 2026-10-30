@@ -92,8 +92,9 @@ Add a new relation type only with Angel's approval, and register it in
 
 Notes read like minimal textbook entries, and the formal statement comes first. For a
 mathematical object, open with a `**Definition.**` sentence around a display block
-using `\LARGE` (a size smaller if it would overflow) and `\underbrace` to label each
-term in plain words. Other concepts may use a fitting label, such as `**Theorem.**`,
+using `\Large` (a size smaller if it would overflow) and `\underbrace` to label each
+term in plain words. Base maths size lives in `.obsidian/snippets/atlas-math.css`,
+not in notes. Other concepts may use a fitting label, such as `**Theorem.**`,
 or a `## Definition` section under a display of the main object.
 
 This skeleton is a starting point, not a schema, and the template stays deliberately

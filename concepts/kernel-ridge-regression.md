@@ -12,7 +12,7 @@ sources:
 # Kernel ridge regression
 
 $$
-\LARGE
+\Large
 \hat f(x_*) = \underbrace{k_{*X}}_{\text{similarity to data}}\ \underbrace{(K_{XX} + \lambda I)^{-1} y}_{\text{weights}}
 $$
 

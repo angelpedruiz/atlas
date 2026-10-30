@@ -16,7 +16,7 @@ sources:
 
 **Definition.** A random function $f$ is a *Gaussian process* with mean $m$ and kernel $k$, written
 $$
-\LARGE
+\Large
 f \sim \mathcal{GP}(\underbrace{m}_{\text{mean function}},\ \underbrace{k}_{\text{kernel}})
 $$
 if for every finite $X = \{x_1, \dots, x_n\}$, $f_X \sim \mathcal{N}(m_X, K_{XX})$ with $[K_{XX}]_{ij} = k(x_i, x_j)$.

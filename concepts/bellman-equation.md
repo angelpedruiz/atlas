@@ -15,7 +15,7 @@ sources:
 # Bellman equation
 
 $$
-\Large
+\large
 V^*(x) = \min_u \big[ \underbrace{\ell(x, u)}_{\text{cost now}} + \gamma\, \underbrace{\mathbb{E}[V^*(x') \mid x, u]}_{\text{value of next state}} \big]
 $$
 
