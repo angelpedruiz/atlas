@@ -5,6 +5,7 @@
   "useMarkdownLinks": false,
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "assets",
+  "showInlineTitle": false,
   "showFrontmatter": true,
   "propertiesInDocument": "visible",
   "userIgnoreFilters": [
