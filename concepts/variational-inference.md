@@ -21,5 +21,7 @@ $$
 \log p(y) \ge \mathbb{E}_q[\log p(y \mid \theta)] - \operatorname{KL}\big(q(\theta) \,\Vert\, p(\theta)\big).
 $$
 
+![[variational-inference-family.svg|420]]
+
 ## Intuition
 If the exact posterior can't be computed, pick a family of distributions you can work with and find the member closest to it. The hard integral becomes an optimisation problem.

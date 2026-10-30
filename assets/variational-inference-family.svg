@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 270" width="460" height="270" role="img" aria-label="A variational family Q inside the space of distributions. The optimum q* is the member of Q closest to p, which lies outside the family.">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#000" stroke-width="1.5"/>
+    </marker>
+  </defs>
+  <rect x="5" y="5" width="450" height="260" rx="14" fill="#f4f2f4" stroke="#000" stroke-width="1.25"/>
+  <circle cx="150" cy="125" r="94" fill="#fdf8d2" stroke="#000" stroke-width="1.25"/>
+  <line x1="190" y1="105" x2="346" y2="88" stroke="#000" stroke-width="1.25" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+  <circle cx="190" cy="105" r="7.5" fill="#000"/>
+  <circle cx="356" cy="87" r="7.5" fill="#000"/>
+  <g font-family="'Latin Modern Math', 'STIX Two Math', 'Cambria Math', serif" fill="#000">
+    <text x="152" y="112" font-size="25" font-style="italic">q<tspan dy="-9" font-size="16" font-style="normal">∗</tspan></text>
+    <text x="370" y="94" font-size="25" font-style="italic">p</text>
+  </g>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" fill="#000" text-anchor="middle">
+    <text x="140" y="146" font-size="21">Variational</text>
+    <text x="140" y="174" font-size="21">family 𝒬</text>
+    <text x="235" y="248" font-size="16">Space of distributions</text>
+  </g>
+</svg>
