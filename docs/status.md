@@ -16,6 +16,7 @@ commit as any change that moves a line here.
   <https://github.com/angelpedruiz/atlas>.
 - Obsidian vault configuration for editing, with a CSS snippet that sets the maths size
   (inline 1.15em, display 1.3em).
+- Hand-drawn SVG figures in `assets/` that follow Obsidian's light or dark theme.
 - CLI (`tools/atlas.py`) to search, create, inspect and rename concepts, with a
   JSON export (`atlas graph`). It has no command yet to add a link or edit a note.
 

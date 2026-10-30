@@ -46,6 +46,8 @@ KNOWN_KEYS = {"title", "essence", "status", *LIST_KEYS}
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 # [[target]], [[target|label]], [[target#heading]], [[target^block]], ![[embed]]
 WIKILINK = re.compile(r"\[\[([^\]|#^]+)(?:[#^][^\]|]*)?(?:\|[^\]]*)?\]\]")
+# embedded files such as ![[figure.svg]] are not concept links
+ATTACHMENT = re.compile(r"\.(?!md$)[a-z0-9]+$", re.I)
 DUP_THRESHOLD = 0.75
 
 if hasattr(sys.stdout, "reconfigure"):
@@ -154,7 +156,8 @@ class Note:
                     self.bad_relation_values.append((rel, v))
             if targets:
                 self.relations[rel] = targets
-        self.body_links = {link_target(t) for t in WIKILINK.findall(self.body)}
+        self.body_links = {link_target(t) for t in WIKILINK.findall(self.body)
+                           if not ATTACHMENT.search(t.strip())}
         self.headings = re.findall(r"^#{1,6}\s+(.+)$", self.body, re.M)
 
     @property

@@ -119,6 +119,9 @@ own concept that would be linked from ~3 other places, split it out.
   shared neighbourhood). Investigate each; propose `equivalent_to` links or merges.
 - **Rename.** `atlas rename <old> <new>` moves the file, rewrites links across
   the vault, and keeps the old title as an alias.
+- **Figures.** Save as `assets/<slug>-<name>.svg`, drawn in black on a transparent
+  background with light fills, and embed with `![[<file>.svg|420]]`. The vault snippet
+  centres them and inverts them in dark themes. No screenshots where an SVG will do.
 - **Before committing.** `atlas lint` must pass (the pre-commit hook runs it).
 
 ## Commits

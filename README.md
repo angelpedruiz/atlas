@@ -14,7 +14,7 @@ concepts/        one file per concept: <slug>.md   (the whole graph lives here)
 notation/        house notation every note follows
 templates/       starter concept template, adapt per note (Obsidian core Templates plugin)
 _inbox/          raw captures waiting to be turned into concepts
-assets/          images and attachments
+assets/          figures (theme-aware SVGs) and attachments
 tools/atlas.py   CLI for search, creation, linting, graph export (stdlib Python)
 tools/hooks/     pre-commit hook running `atlas lint`
 AGENTS.md        rules for coding agents (CLAUDE.md imports it)

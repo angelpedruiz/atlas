@@ -8,3 +8,13 @@
   font-size: 1.3em;
   overflow-x: auto;
 }
+
+/* figures: SVGs are drawn in black on transparent, and dark themes invert them */
+img[src*=".svg"] {
+  display: block;
+  margin-inline: auto;
+}
+
+.theme-dark img[src*=".svg"] {
+  filter: invert(1) hue-rotate(180deg);
+}
