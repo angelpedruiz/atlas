@@ -9,7 +9,7 @@ Markdown + LaTeX for content, Git for the history of how understanding evolved.
 ```
 concepts/        one file per concept: <slug>.md   (the whole graph lives here)
 notation/        house notation every note follows
-templates/       concept template (Obsidian core Templates plugin)
+templates/       starter concept template, adapt per note (Obsidian core Templates plugin)
 _inbox/          raw captures waiting to be turned into concepts
 assets/          images and attachments
 tools/atlas.py   CLI for search, creation, linting, graph export (stdlib Python)

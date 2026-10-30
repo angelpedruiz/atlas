@@ -84,8 +84,11 @@ Add a new relation type only with Angel's approval, and register it in
 ## Open questions   — what isn't understood yet
 ```
 
-Sections may be empty. Keep notes focused: if a section grows into its own concept
-that would be linked from ~3 other places, split it out.
+This skeleton is a starting point, not a schema, and the template stays deliberately
+loose for now: add, rename, drop or reorder sections to fit the concept. Only
+`## Intuition` and `## Connections` are worth keeping, because the invariants above
+refer to them. Sections may be empty. Keep notes focused: if a section grows into its
+own concept that would be linked from ~3 other places, split it out.
 
 ## Workflows
 
