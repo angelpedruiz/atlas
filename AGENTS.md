@@ -1,14 +1,14 @@
 # Agent rules — Atlas
 
-This repo is Angel's personal, atemporal knowledge graph. Each concept has exactly
-one canonical note in `concepts/`, written in Angel's words and notation, linked
+This repo is a personal, atemporal knowledge graph. Each concept has exactly
+one canonical note in `concepts/`, written in the owner's words and notation, linked
 to related concepts across disciplines. Git history is the record of how
 understanding evolved; notes themselves never carry dates or "updated" logs.
 
 Tooling: `python3 tools/atlas.py <command>` (stdlib only). Run `--help` for details.
 
-`docs/` holds what Angel and agents have agreed: `purpose.md` is the goal, and
-`status.md` tracks the repo against it. Change `purpose.md` only with Angel's agreement.
+`docs/` holds what the owner and agents have agreed: `purpose.md` is the goal, and
+`status.md` tracks the repo against it. Change `purpose.md` only with the owner's agreement.
 
 ## Invariants
 
@@ -24,17 +24,17 @@ Tooling: `python3 tools/atlas.py <command>` (stdlib only). Run `--help` for deta
    match is structural rather than exact) and write the translation in
    `## Connections`: the symbol map and the scope of the equivalence. Merge two
    notes only if they are the same object *and* the same framing, and only after
-   Angel approves. A merge keeps the surviving slug, moves the other name to
+   the owner approves. A merge keeps the surviving slug, moves the other name to
    `aliases`, and rewrites links (`atlas rename`).
 4. **Notation follows `notation/notation.md`.** Translate source notation into it;
    never copy a textbook's symbols verbatim. If a new symbol is needed, add it to
    the table in the same commit. Record unavoidable collisions there too.
-5. **Angel owns the voice.** The `## Intuition` section is Angel's. Agents may draft
+5. **The voice is the owner's.** The `## Intuition` section is theirs. Agents may draft
    it only in new notes (`status: seed`). In `draft`/`stable` notes, never rewrite
    Intuition; leave a suggestion as an Obsidian comment
    `%% agent: ... %%` (hidden in reading view) or in the commit message.
-   Other sections may be extended, but do not delete Angel's text without asking.
-   Agent changes are proposals: work on a branch, and Angel verifies and corrects
+   Other sections may be extended, but do not delete the owner's text without asking.
+   Agent changes are proposals: work on a branch, and the owner verifies and corrects
    them before they reach `main`.
 6. **Link densely, type the important edges.** Every new note links to ≥ 2 existing
    notes. Typed relations go in frontmatter (vocabulary below); the prose in
@@ -56,7 +56,7 @@ title: Kalman filter                 # canonical display name
 essence: "The exact Bayesian filter for linear-Gaussian models."   # one sentence, required
 aliases: [KF, "linear quadratic estimator"]   # other names, incl. other fields' names
 domains: [estimation, control]       # reuse existing values: `atlas domains`
-status: seed                         # seed (agent draft) | draft (Angel edited) | stable
+status: seed                         # seed (agent draft) | draft (the owner edited) | stable
 requires: ["[[gaussian-conditioning]]"]      # typed relations: list of quoted wikilinks
 special_case_of: ["[[bayesian-filtering]]"]
 sources:                              # provenance, not organisation
@@ -76,7 +76,7 @@ Relation keys are optional; omit empty ones except `requires`.
 | `analogous_to` | shared structure, not identical (dualities, same recursion in another semiring) | `analogous_to` | yes |
 | `contrasts_with` | alternative approaches worth comparing | `contrasts_with` | yes |
 
-Add a new relation type only with Angel's approval, and register it in
+Add a new relation type only with the owner's approval, and register it in
 `tools/atlas.py` (`RELATIONS`) and this table in the same commit.
 
 ## Note body skeleton
@@ -84,7 +84,7 @@ Add a new relation type only with Angel's approval, and register it in
 ```
 # <title>
 **Definition.**     — book-style statement, with the object in a large labelled display
-## Intuition        — 2–5 sentences, Angel's words; the picture to keep in mind
+## Intuition        — 2–5 sentences, the owner's words; the picture to keep in mind
 ## Key results      — the facts worth remembering, each one line + equation if needed
 ## Connections      — prose for each typed edge and notable untyped link
 ## Open questions   — what isn't understood yet
@@ -99,8 +99,9 @@ or a `## Definition` section under a display of the main object.
 
 Keep inline maths short. A formula that could reach the edge of the page, or an
 equation with a long right-hand side, goes on its own display line below the text.
-Use a big brace (`\begin{cases}`) sparingly, only for equations that really form one
-system, such as a model or a predict step.
+Use a big brace (`\begin{cases}`) when it fits, for example when defining something
+with components of equal importance, such as a model or a predict step. Don't overuse
+it.
 
 This skeleton is a starting point, not a schema, and the template stays deliberately
 loose for now: add, rename, drop or reorder sections to fit the concept. Only
@@ -126,5 +127,5 @@ if the change affects them, so the docs always describe the current project.
 
 One logical change per commit. Message format: `<verb>(<slug>): <summary>`, with
 verbs `add`, `refine`, `link`, `merge`, `rename`, `notation`, `tools`.
-Agents append a trailer `Agent: <name>` so agent edits are separable from Angel's
+Agents append a trailer `Agent: <name>` so agent edits are separable from the owner's
 in `git log`. Never rewrite history.

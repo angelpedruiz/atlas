@@ -36,7 +36,7 @@ commit as any change that moves a line here.
 ## Agreed
 
 - **Agents and intuition.** Agents may draft the intuition in new `seed` notes, but
-  never rewrite an existing one. Angel verifies and corrects agent changes before
+  never rewrite an existing one. The owner verifies and corrects agent changes before
   they reach `main`.
 
 ## Known problems
