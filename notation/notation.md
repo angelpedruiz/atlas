@@ -29,8 +29,10 @@ This is an initial proposal: change anything, and note the change in the commit.
 | expectation, covariance | $\mathbb{E}[\cdot]$, $\operatorname{Cov}[\cdot]$ | |
 | precision | $\Lambda = \Sigma^{-1}$ | |
 | joint blocks | $\Sigma_{ab}$ | block of $\operatorname{Cov}[(a,b)]$ |
-| Gaussian process | $f \sim \mathcal{GP}(m, k)$ | |
-| kernel, Gram matrix | $k(x,x')$, $K_{XX}$, $k_{*X}$ | Gram matrix always carries set subscripts |
+| Gaussian process | $f \sim \mathcal{GP}(\mu, k)$ | $\mu$ is the mean function |
+| kernel, Gram matrix | $k(x,x')$, $K_{AA}$, $k_{xA}$ | Gram matrix always carries set subscripts; $A$ is a finite input set |
+| observation noise, data | $\sigma_n^2$, $\mathcal{D}$ | |
+| GP posterior | $\mu_D$, $k_D$ | |
 | reproducing kernel Hilbert space | $\mathcal{H}_k$, norm $\lVert f \rVert_{\mathcal{H}_k}$ | |
 | regularisation weight | $\lambda$ | |
 | variational family, approximation | $\mathcal{Q}$, $q$ | |
@@ -67,4 +69,4 @@ This is an initial proposal: change anything, and note the change in the commit.
 
 - $Q$: LQR state weight / process-noise covariance (intentional, dual) vs. $Q^\pi$ (always superscripted).
 - $P$: estimation covariance / LQR value matrix (intentional, dual) vs. $\mathcal{P}_\pi$.
-- $K$: Kalman gain $K_t$ (time index) vs. Gram matrix $K_{XX}$ (set index).
+- $K$: Kalman gain $K_t$ (time index) vs. Gram matrix $K_{AA}$ (set index).
