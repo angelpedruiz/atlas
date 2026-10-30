@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""atlas — search, create, lint and inspect the Knowledge Atlas.
+"""atlas — search, create, lint and inspect the Atlas.
 
 Standard library only, so it runs anywhere Python 3.9+ does.
 

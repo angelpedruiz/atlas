@@ -9,7 +9,8 @@ commit as any change that moves a line here.
 - Frontmatter with aliases, domains, status and typed relations, checked by
   `atlas lint`.
 - Inline wikilinks with display text, resolved to the canonical slug.
-- Plain-text Git repo, with history as the record of understanding.
+- Plain-text Git repo, with history as the record of understanding, public at
+  <https://github.com/angelpedruiz/atlas>.
 - Obsidian vault configuration for editing.
 - CLI (`tools/atlas.py`) to search, create, inspect and rename concepts, with a
   JSON export (`atlas graph`). It has no command yet to add a link or edit a note.

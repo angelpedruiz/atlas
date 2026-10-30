@@ -1,8 +1,10 @@
-# Knowledge Atlas
+# Atlas
 
 A personal, atemporal knowledge graph: one canonical note per concept, in my words
 and notation, linked across disciplines. Obsidian for reading and the graph,
 Markdown + LaTeX for content, Git for the history of how understanding evolved.
+
+Repo: <https://github.com/angelpedruiz/atlas>
 
 ## Layout
 

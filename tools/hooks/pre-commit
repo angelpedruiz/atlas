@@ -1,5 +1,5 @@
 #!/bin/sh
-# Knowledge Atlas pre-commit: refuse commits that break the schema or link rules.
+# Atlas pre-commit: refuse commits that break the schema or link rules.
 # Enable once per clone:  git config core.hooksPath tools/hooks
 ROOT="$(git rev-parse --show-toplevel)"
 PY="$(command -v python3 || command -v python)"

@@ -1,4 +1,4 @@
-# Agent rules — Knowledge Atlas
+# Agent rules — Atlas
 
 This repo is Angel's personal, atemporal knowledge graph. Each concept has exactly
 one canonical note in `concepts/`, written in Angel's words and notation, linked
