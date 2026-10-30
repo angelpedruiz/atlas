@@ -99,6 +99,8 @@ or a `## Definition` section under a display of the main object.
 
 Keep inline maths short. A formula that could reach the edge of the page, or an
 equation with a long right-hand side, goes on its own display line below the text.
+Group equations that belong together, such as a model or a predict step, under a big
+brace with `\begin{cases}`.
 
 This skeleton is a starting point, not a schema, and the template stays deliberately
 loose for now: add, rename, drop or reorder sections to fit the concept. Only

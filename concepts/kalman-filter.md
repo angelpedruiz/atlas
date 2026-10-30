@@ -23,21 +23,26 @@ $$
 ## Definition
 Model:
 $$
-x_t = A x_{t-1} + B u_{t-1} + w_{t-1}, \quad w \sim \mathcal{N}(0, Q); \qquad
-y_t = C x_t + v_t, \quad v \sim \mathcal{N}(0, R).
+\begin{cases}
+x_t = A x_{t-1} + B u_{t-1} + w_{t-1}, & w \sim \mathcal{N}(0, Q) \\
+y_t = C x_t + v_t, & v \sim \mathcal{N}(0, R)
+\end{cases}
 $$
 **Predict**
 $$
-\hat x_{t\mid t-1} = A \hat x_{t-1\mid t-1} + B u_{t-1}, \qquad
-P_{t\mid t-1} = A P_{t-1\mid t-1} A^\top + Q.
+\begin{cases}
+\hat x_{t\mid t-1} = A \hat x_{t-1\mid t-1} + B u_{t-1} \\
+P_{t\mid t-1} = A P_{t-1\mid t-1} A^\top + Q
+\end{cases}
 $$
 **Update**
 $$
-S_t = C P_{t\mid t-1} C^\top + R, \qquad K_t = P_{t\mid t-1} C^\top S_t^{-1},
-$$
-$$
-\hat x_{t\mid t} = \hat x_{t\mid t-1} + K_t\,(y_t - C \hat x_{t\mid t-1}), \qquad
-P_{t\mid t} = (I - K_t C)\, P_{t\mid t-1}.
+\begin{cases}
+S_t = C P_{t\mid t-1} C^\top + R \\
+K_t = P_{t\mid t-1} C^\top S_t^{-1} \\
+\hat x_{t\mid t} = \hat x_{t\mid t-1} + K_t\,(y_t - C \hat x_{t\mid t-1}) \\
+P_{t\mid t} = (I - K_t C)\, P_{t\mid t-1}
+\end{cases}
 $$
 
 ## Intuition
