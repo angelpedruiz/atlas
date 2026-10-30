@@ -33,6 +33,8 @@ This is an initial proposal: change anything, and note the change in the commit.
 | kernel, Gram matrix | $k(x,x')$, $K_{XX}$, $k_{*X}$ | Gram matrix always carries set subscripts |
 | reproducing kernel Hilbert space | $\mathcal{H}_k$, norm $\lVert f \rVert_{\mathcal{H}_k}$ | |
 | regularisation weight | $\lambda$ | |
+| variational family, approximation | $\mathcal{Q}$, $q$ | |
+| KL divergence | $\operatorname{KL}(q \,\Vert\, p)$ | |
 
 ## Dynamical systems, estimation, control
 
