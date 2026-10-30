@@ -42,7 +42,8 @@ Tooling: `python3 tools/atlas.py <command>` (stdlib only). Run `--help` for deta
    `atlas show` computes inverses.
 7. **Stubs are welcome.** `[[some-concept]]` may point to a note that does not exist
    yet. Unresolved links are the to-do list (`atlas stubs`). Never create an empty
-   file just to resolve a link.
+   file just to resolve a link. Obsidian makes one when a stub link is clicked, so
+   `atlas` treats empty files as stubs and `atlas new` can fill them.
 8. **Don't duplicate content.** Reuse with an embed (`![[gaussian-conditioning#Definition]]`)
    or a link, never a copied derivation.
 9. **Links target slugs, not aliases.** Write `[[kalman-filter|KF]]`, not `[[KF]]`

@@ -184,6 +184,8 @@ def _as_list(v) -> list[str]:
 def load() -> tuple[dict[str, Note], list[tuple[str, str]]]:
     notes, errors = {}, []
     for p in sorted(CONCEPTS.glob("*.md")):
+        if p.stat().st_size == 0:  # Obsidian creates these when a stub link is clicked
+            continue
         try:
             notes[p.stem.lower()] = Note(p)
         except Exception as e:  # noqa: BLE001
@@ -269,7 +271,7 @@ def cmd_new(a):
     notes, _ = load()
     slug = a.slug or slugify(a.title)
     path = CONCEPTS / f"{slug}.md"
-    if path.exists() or slug in notes:
+    if (path.exists() and path.stat().st_size) or slug in notes:
         print(f"error: {path.relative_to(ROOT)} already exists")
         return 1
     if not SLUG_RE.match(slug):
