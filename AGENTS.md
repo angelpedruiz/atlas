@@ -98,6 +98,8 @@ term in plain words. Base maths size lives in `.obsidian/snippets/atlas-math.css
 not in notes. Other concepts may use a fitting label, such as `**Theorem.**`,
 or a `## Definition` section under a display of the main object.
 
+Write `:=` when defining a symbol, and keep `=` for results and identities.
+
 Keep inline maths short. A formula that could reach the edge of the page, or an
 equation with a long right-hand side, goes on its own display line below the text.
 Use a big brace (`\begin{cases}`) when it fits, for example when defining something

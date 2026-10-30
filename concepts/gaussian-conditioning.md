@@ -22,8 +22,8 @@ $$
 a \mid b \sim \mathcal{N}\big(\mu_{a\mid b},\, \Sigma_{a\mid b}\big),
 $$
 $$
-\mu_{a\mid b} = \mu_a + \Sigma_{ab}\Sigma_{bb}^{-1}(b - \mu_b), \qquad
-\Sigma_{a\mid b} = \Sigma_{aa} - \Sigma_{ab}\Sigma_{bb}^{-1}\Sigma_{ba}.
+\mu_{a\mid b} := \mu_a + \Sigma_{ab}\Sigma_{bb}^{-1}(b - \mu_b), \qquad
+\Sigma_{a\mid b} := \Sigma_{aa} - \Sigma_{ab}\Sigma_{bb}^{-1}\Sigma_{ba}.
 $$
 
 ## Intuition
@@ -33,9 +33,9 @@ Observing part of a jointly Gaussian vector moves the mean of the rest along the
 - $\Sigma_{a\mid b}$ is the Schur complement of $\Sigma_{bb}$ and is independent of the observed $b$, so posterior uncertainty can be computed before any data arrive.
 - **Linear-Gaussian measurement form.** With prior $x \sim \mathcal{N}(\mu, P)$ and $y = Cx + v$, $v \sim \mathcal{N}(0, R)$ independent of $x$: $\Sigma_{xy} = PC^\top$, $\Sigma_{yy} = CPC^\top + R$, hence
 $$
-x \mid y \sim \mathcal{N}\big(\mu + K(y - C\mu),\ (I - KC)P\big), \qquad K = PC^\top (CPC^\top + R)^{-1}.
+x \mid y \sim \mathcal{N}\big(\mu + K(y - C\mu),\ (I - KC)P\big), \qquad K := PC^\top (CPC^\top + R)^{-1}.
 $$
-- **Precision form.** With $\Lambda = \Sigma^{-1}$,
+- **Precision form.** With $\Lambda := \Sigma^{-1}$,
   $$
   \Sigma_{a\mid b} = \Lambda_{aa}^{-1}, \qquad \mu_{a\mid b} = \mu_a - \Lambda_{aa}^{-1}\Lambda_{ab}(b - \mu_b).
   $$

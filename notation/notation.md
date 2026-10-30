@@ -27,7 +27,7 @@ This is an initial proposal: change anything, and note the change in the commit.
 | density / pmf | $p(x)$, $p(x \mid y)$ | one symbol for all densities |
 | Gaussian | $\mathcal{N}(\mu, \Sigma)$, density $\mathcal{N}(x;\mu,\Sigma)$ | covariance, not std, as 2nd argument |
 | expectation, covariance | $\mathbb{E}[\cdot]$, $\operatorname{Cov}[\cdot]$ | |
-| precision | $\Lambda = \Sigma^{-1}$ | |
+| precision | $\Lambda := \Sigma^{-1}$ | |
 | joint blocks | $\Sigma_{ab}$ | block of $\operatorname{Cov}[(a,b)]$ |
 | Gaussian process | $f \sim \mathcal{GP}(\mu, k)$ | $\mu$ is the mean function |
 | kernel, Gram matrix | $k(x,x')$, $K_{AA}$, $k_{xA}$ | Gram matrix always carries set subscripts; $A$ is a finite input set |

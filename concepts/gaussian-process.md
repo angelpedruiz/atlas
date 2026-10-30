@@ -20,16 +20,16 @@ $$
 \Large
 f \sim \mathcal{GP}(\underbrace{\mu}_{\text{mean function}},\ \underbrace{k}_{\text{kernel}})
 $$
-with $\mu(x) = \mathbb{E}[f(x)]$ and $k(x, x') = \operatorname{Cov}(f(x), f(x'))$. For any finite $A = \{x_1, \dots, x_m\}$,
+with $\mu(x) := \mathbb{E}[f(x)]$ and $k(x, x') := \operatorname{Cov}(f(x), f(x'))$. For any finite $A = \{x_1, \dots, x_m\}$,
 $$
 f_A \sim \mathcal{N}(\mu_A, K_{AA}).
 $$
 
-**Posterior.** Observe $y_i = f(x_i) + \varepsilon_i$ with $\varepsilon_i \sim \mathcal{N}(0, \sigma_n^2)$, and let $K_y = K_{AA} + \sigma_n^2 I$. By [[gaussian-conditioning]], $f \mid \mathcal{D} \sim \mathcal{GP}(\mu_D, k_D)$ with
+**Posterior.** Observe $y_i = f(x_i) + \varepsilon_i$ with $\varepsilon_i \sim \mathcal{N}(0, \sigma_n^2)$, and let $K_y := K_{AA} + \sigma_n^2 I$. By [[gaussian-conditioning]], $f \mid \mathcal{D} \sim \mathcal{GP}(\mu_D, k_D)$ with
 $$
 \begin{cases}
-\mu_D(x) = \mu(x) + k_{xA} K_y^{-1} (y_A - \mu_A) \\
-k_D(x, x') = k(x, x') - k_{xA} K_y^{-1} k_{Ax'}
+\mu_D(x) := \mu(x) + k_{xA} K_y^{-1} (y_A - \mu_A) \\
+k_D(x, x') := k(x, x') - k_{xA} K_y^{-1} k_{Ax'}
 \end{cases}
 $$
 

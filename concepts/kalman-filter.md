@@ -39,8 +39,8 @@ $$
 **Update**, by [[gaussian-conditioning]]
 $$
 \begin{cases}
-S_t = C P_{t\mid t-1} C^\top + R \\
-K_t = P_{t\mid t-1} C^\top S_t^{-1} \\
+S_t := C P_{t\mid t-1} C^\top + R \\
+K_t := P_{t\mid t-1} C^\top S_t^{-1} \\
 \hat x_{t\mid t} = \hat x_{t\mid t-1} + K_t\,(y_t - C \hat x_{t\mid t-1}) \\
 P_{t\mid t} = (I - K_t C)\, P_{t\mid t-1}
 \end{cases}
