@@ -11,10 +11,10 @@ sources:
 
 # Variational inference
 
-**Definition.** When the posterior in [[bayes-rule]] is intractable, *variational inference* approximates it by
+**Definition.** When the posterior in [[bayes-rule]] is intractable, *variational inference* approximates it by the closest member of a tractable family $\mathcal{Q}$:
 $$
 \Large
-q^* = \arg\min_{q \in \underbrace{\mathcal{Q}}_{\text{tractable family}}} \underbrace{\operatorname{KL}\big(q(\theta) \,\Vert\, p(\theta \mid y)\big)}_{\text{mismatch to the posterior}}
+q^* = \operatorname*{argmin}_{q \in \mathcal{Q}} \underbrace{\operatorname{KL}\big(q(\theta) \,\Vert\, p(\theta \mid y)\big)}_{\text{mismatch to the posterior}}
 $$
 Equivalently, it maximises the evidence lower bound, built from the [[likelihood]]:
 $$

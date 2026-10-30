@@ -101,7 +101,8 @@ Keep inline maths short. A formula that could reach the edge of the page, or an
 equation with a long right-hand side, goes on its own display line below the text.
 Use a big brace (`\begin{cases}`) when it fits, for example when defining something
 with components of equal importance, such as a model or a predict step. Don't overuse
-it.
+it. Write `\operatorname*{argmin}_{x \in X}` so `argmin` is one word with the search
+set below it; `\arg\min` splits the word and misplaces the set.
 
 This skeleton is a starting point, not a schema, and the template stays deliberately
 loose for now: add, rename, drop or reorder sections to fit the concept. Only
