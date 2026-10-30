@@ -37,20 +37,18 @@ RL form: $r = -\ell$ and $\min \to \max$.
 The tail of an optimal plan is itself optimal from wherever it starts. So the value of a state is the best one-step cost plus the value of where you land, which turns a search over whole trajectories into a recursion over states.
 
 ## Key results
-- The Bellman operator $\mathcal{T}$ is a $\gamma$-contraction in $\lVert\cdot\rVert_\infty$: unique fixed point $V^*$, and value iteration converges geometrically (Banach).
-- Policy evaluation is linear:
+- **Contraction.** The Bellman operator $\mathcal{T}$ is a $\gamma$-contraction in $\lVert\cdot\rVert_\infty$: unique fixed point $V^*$, and value iteration converges geometrically (Banach).
+- **Policy evaluation.** It is linear:
   $$
   V^\pi = \ell_\pi + \gamma \mathcal{P}_\pi V^\pi \;\Rightarrow\; V^\pi = (I - \gamma \mathcal{P}_\pi)^{-1}\ell_\pi .
   $$
-- Value iteration, policy iteration and [[q-learning]] are all ways to find or approximate the fixed point.
-- Continuous-time limit: the [[hamilton-jacobi-bellman-equation]]:
+- **Solvers.** Value iteration, policy iteration and [[q-learning]] are all ways to find or approximate the fixed point.
+- **Continuous time.** The limit is the [[hamilton-jacobi-bellman-equation]]:
   $$
   -\partial_t V = \min_u \{ \ell(x, u) + \nabla_x V^\top f(x, u) \}.
   $$
 
 ## Connections
-- [[linear-quadratic-regulator]]: the special case with a closed-form solution (quadratic $V$).
-- Same chain-DP structure as [[bayesian-filtering]], in the $(\min, +)$ semiring instead of $(\int, \times)$ and run backward instead of forward.
-- Versus [[pontryagin-minimum-principle]]: DP gives a global feedback law over all states but suffers the curse of dimensionality; Pontryagin gives necessary conditions along one trajectory (open-loop) and scales to large state spaces.
-
-## Open questions
+- **LQR.** [[linear-quadratic-regulator]] is the special case with a closed-form solution (quadratic $V$).
+- **Filtering.** [[bayesian-filtering]] has the same chain-DP structure, in the $(\min, +)$ semiring instead of $(\int, \times)$ and run backward instead of forward.
+- **Pontryagin.** Versus [[pontryagin-minimum-principle]]: DP gives a global feedback law over all states but suffers the curse of dimensionality; Pontryagin gives necessary conditions along one trajectory (open-loop) and scales to large state spaces.

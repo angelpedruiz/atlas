@@ -30,7 +30,7 @@ $$
 Observing part of a jointly Gaussian vector moves the mean of the rest along the regression line and shrinks its covariance by the part the observation explains. The result is again Gaussian, and how much the uncertainty shrinks does not depend on the value observed, only on the fact that it was observed.
 
 ## Key results
-- $\Sigma_{a\mid b}$ is the Schur complement of $\Sigma_{bb}$ and is independent of the observed $b$, so posterior uncertainty can be computed before any data arrive.
+- **Schur complement.** $\Sigma_{a\mid b}$ is the Schur complement of $\Sigma_{bb}$ and is independent of the observed $b$, so posterior uncertainty can be computed before any data arrive.
 - **Linear-Gaussian measurement form.** With prior $x \sim \mathcal{N}(\mu, P)$ and $y = Cx + v$, $v \sim \mathcal{N}(0, R)$ independent of $x$: $\Sigma_{xy} = PC^\top$, $\Sigma_{yy} = CPC^\top + R$, hence
 $$
 x \mid y \sim \mathcal{N}\big(\mu + K(y - C\mu),\ (I - KC)P\big), \qquad K := PC^\top (CPC^\top + R)^{-1}.
@@ -42,9 +42,7 @@ $$
   Conditioning is easy in precision form; marginalising is easy in covariance form.
 
 ## Connections
-- This is [[bayes-rule]] in closed form: a Gaussian prior with a linear-Gaussian likelihood is conjugate.
-- The measurement form above is exactly the update step of the [[kalman-filter]]; data-independence of $\Sigma_{a\mid b}$ is why the Kalman covariance recursion can run offline.
-- The [[gaussian-process]] posterior is this formula with $a = f(x_*)$ and $b = y$.
-- $\Sigma_{ab}\Sigma_{bb}^{-1}$ is the population regression coefficient of $a$ on $b$ ([[linear-regression]]): the conditional mean is the best linear predictor.
-
-## Open questions
+- **Bayes' rule.** This is [[bayes-rule]] in closed form: a Gaussian prior with a linear-Gaussian likelihood is conjugate.
+- **Kalman filter.** The measurement form above is exactly the update step of the [[kalman-filter]]; data-independence of $\Sigma_{a\mid b}$ is why the Kalman covariance recursion can run offline.
+- **Gaussian process.** The [[gaussian-process]] posterior is this formula with $a = f(x_*)$ and $b = y$.
+- **Regression.** $\Sigma_{ab}\Sigma_{bb}^{-1}$ is the population regression coefficient of $a$ on $b$ ([[linear-regression]]): the conditional mean is the best linear predictor.

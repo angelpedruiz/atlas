@@ -33,15 +33,13 @@ $$
 A hidden state evolves and we see noisy glimpses of it. Keep a belief over the state and alternate two moves: let the belief drift and spread according to the dynamics, then sharpen it with Bayes' rule when a measurement arrives. The belief at time $t$ summarises all past data, so nothing else needs to be stored.
 
 ## Key results
-- Closed form only in special cases: linear-Gaussian gives the [[kalman-filter]]; a finite state space gives the forward algorithm of the [[hidden-markov-model]]. Otherwise approximate: [[extended-kalman-filter]], [[particle-filter]].
+- **Closed forms.** Only in special cases: linear-Gaussian gives the [[kalman-filter]]; a finite state space gives the forward algorithm of the [[hidden-markov-model]]. Otherwise approximate: [[extended-kalman-filter]], [[particle-filter]].
 - **Prediction-error decomposition.** The normalisers multiply to the marginal likelihood, which is how model parameters are fitted:
   $$
   p(y_{1:T}) = \prod_{t} p(y_t \mid y_{1:t-1}).
   $$
-- Smoothing $p(x_t \mid y_{1:T})$ needs an extra backward pass ([[rts-smoother]] in the linear-Gaussian case).
+- **Smoothing.** $p(x_t \mid y_{1:T})$ needs an extra backward pass ([[rts-smoother]] in the linear-Gaussian case).
 
 ## Connections
 - **Analogous to the [[bellman-equation]].** Both are dynamic programming on a chain. Filtering runs forward and *integrates out* the past, using $(\textstyle\int, \times)$; Bellman runs backward and *optimises out* the future, using $(\min, +)$. Replacing the integral by a max in filtering gives the [[viterbi-algorithm]], which in negative-log space is literally a min-sum Bellman recursion.
-- Each update step is a single application of [[bayes-rule]].
-
-## Open questions
+- **Bayes' rule.** Each update step is a single application of [[bayes-rule]].

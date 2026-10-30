@@ -10,8 +10,9 @@ commit as any change that moves a line here.
   `atlas lint`.
 - Inline wikilinks with display text, resolved to the canonical slug.
 - Notes read like textbook entries: the definition comes first, with the main object
-  large, centred and labelled. `likelihood` and `gaussian-process` are in the full
-  format; the other notes still have a `## Definition` section.
+  large, centred and labelled. `likelihood`, `kl-divergence`, `variational-inference`,
+  `kalman-filter` and `gaussian-process` are in the full format; the other notes still
+  have a `## Definition` section.
 - Plain-text Git repo, with history as the record of understanding, public at
   <https://github.com/angelpedruiz/atlas>.
 - Obsidian vault configuration for editing, with a CSS snippet that sets the maths size

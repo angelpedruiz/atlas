@@ -22,5 +22,5 @@ It is non-negative, zero only when $q = p$, and not symmetric.
 Sample from $q$ and ask how much more likely each sample is under $q$ than under $p$. It behaves like a distance but isn't one: swapping the arguments asks a different question.
 
 ## Connections
-- [[variational-inference]] minimises $\operatorname{KL}(q \,\Vert\, p(\theta \mid y))$ over a tractable family.
-- Maximising the [[likelihood]] on many samples minimises the KL divergence from the model to the data distribution.
+- **Variational inference.** [[variational-inference]] minimises $\operatorname{KL}(q \,\Vert\, p(\theta \mid y))$ over a tractable family.
+- **Maximum likelihood.** Maximising the [[likelihood]] on many samples minimises the KL divergence from the model to the data distribution.

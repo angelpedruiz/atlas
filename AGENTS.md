@@ -88,7 +88,6 @@ Add a new relation type only with the owner's approval, and register it in
 ## Intuition        — 2–5 sentences, the owner's words; the picture to keep in mind
 ## Key results      — the facts worth remembering, each one line + equation if needed
 ## Connections      — prose for each typed edge and notable untyped link
-## Open questions   — what isn't understood yet
 ```
 
 Notes read like minimal textbook entries, and the formal statement comes first. For a
@@ -97,6 +96,9 @@ using `\Large` (a size smaller if it would overflow) and `\underbrace` to label 
 term in plain words. Base maths size lives in `.obsidian/snippets/atlas-math.css`,
 not in notes. Other concepts may use a fitting label, such as `**Theorem.**`,
 or a `## Definition` section under a display of the main object.
+
+In `## Key results` and `## Connections`, start each bullet with a bold word or short
+phrase, like `- **Conjugacy.** ...`, so a note can be skimmed.
 
 Write `:=` when defining a symbol, and keep `=` for results and identities.
 

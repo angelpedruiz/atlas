@@ -18,5 +18,3 @@ sources: []
 ## Key results
 
 ## Connections
-
-## Open questions
