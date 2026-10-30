@@ -53,6 +53,7 @@ Tooling: `python3 tools/atlas.py <command>` (stdlib only). Run `--help` for deta
 ```yaml
 ---
 title: Kalman filter                 # canonical display name
+essence: "The exact Bayesian filter for linear-Gaussian models."   # one sentence, required
 aliases: [KF, "linear quadratic estimator"]   # other names, incl. other fields' names
 domains: [estimation, control]       # reuse existing values: `atlas domains`
 status: seed                         # seed (agent draft) | draft (Angel edited) | stable

@@ -1,5 +1,6 @@
 ---
 title: Kalman filter
+essence: "The exact Bayesian filter for linear-Gaussian models, carrying a mean and covariance through predict and update steps."
 aliases: ["KF", "linear quadratic estimator", "LQE"]
 domains: [estimation, control, probability]
 status: seed

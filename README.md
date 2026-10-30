@@ -34,7 +34,7 @@ AGENTS.md        rules for coding agents (CLAUDE.md imports it)
 
 ```sh
 atlas find "linear quadratic estimator"   # does this concept exist under any name?
-atlas new "Particle filter" --alias SMC --domain estimation
+atlas new "Particle filter" --alias SMC --domain estimation --essence "One sentence."
 atlas show kalman-filter                  # typed neighbourhood incl. inverse edges
 atlas stubs                               # linked-but-unwritten concepts, most wanted first
 atlas list --status seed                  # agent drafts whose Intuition I haven't rewritten

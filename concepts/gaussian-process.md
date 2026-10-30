@@ -1,5 +1,6 @@
 ---
 title: Gaussian process
+essence: "A distribution over functions whose values at any finite set of inputs are jointly Gaussian, with covariance given by a kernel."
 aliases: ["GP", "Gaussian process regression", "GPR", "kriging"]
 domains: [machine-learning, probability]
 status: seed

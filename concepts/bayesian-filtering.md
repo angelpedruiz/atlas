@@ -1,5 +1,6 @@
 ---
 title: Bayesian filtering
+essence: "Keep a belief over a hidden state by alternating a prediction through the dynamics with a Bayes update from each measurement."
 aliases: ["recursive Bayesian estimation", "Bayes filter", "sequential Bayesian inference"]
 domains: [probability, estimation]
 status: seed

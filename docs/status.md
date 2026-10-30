@@ -6,7 +6,7 @@ commit as any change that moves a line here.
 ## In place
 
 - One Markdown file per concept in `concepts/`, in house notation (`notation/`).
-- Frontmatter with aliases, domains, status and typed relations, checked by
+- Frontmatter with essence, aliases, domains, status and typed relations, checked by
   `atlas lint`.
 - Inline wikilinks with display text, resolved to the canonical slug.
 - Plain-text Git repo, with history as the record of understanding, public at
@@ -17,8 +17,6 @@ commit as any change that moves a line here.
 
 ## Not built
 
-- One-sentence essence in frontmatter. `essence` is not in the schema, the template
-  or any note, and `atlas lint` would warn about it as an unknown key.
 - Implementations and `viz` code blocks in notes.
 - Build step from `viz` blocks to static SVGs and interactive widgets.
 - Obsidian reading view that hides plotting code and shows the static pictures.
@@ -39,7 +37,4 @@ commit as any change that moves a line here.
 
 ## Known problems
 
-- `atlas lint` fails: `concepts/kernel-ridge-regression.md` is empty and untracked.
-- `tools/atlas.py` and `tools/hooks/pre-commit` have lost their executable bit in the
-  working tree, so Git skips the pre-commit hook.
-- Stray ref `refs/heads/main:Zone.Identifier` breaks `git log --all`.
+- Stray ref `refs/heads/main:Zone.Identifier` breaks `git log --all` and `git fetch`.

@@ -1,5 +1,6 @@
 ---
 title: Bayes' rule
+essence: "The posterior is the prior reweighted by how well each hypothesis explains the data, then renormalised."
 aliases: ["Bayes' theorem", "Bayes theorem", "inverse probability"]
 domains: [probability]
 status: seed

@@ -1,5 +1,6 @@
 ---
 title: Bellman equation
+essence: "The value of a state is the best one-step cost plus the value of the state you land in."
 aliases: ["dynamic programming principle", "principle of optimality", "Bellman optimality equation"]
 domains: [optimization, control, reinforcement-learning]
 status: seed

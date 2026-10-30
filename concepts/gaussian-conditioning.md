@@ -1,5 +1,6 @@
 ---
 title: Gaussian conditioning
+essence: "Conditioning on part of a jointly Gaussian vector gives a Gaussian whose mean shifts linearly with the observation and whose covariance shrinks by an amount independent of it."
 aliases: ["conditional Gaussian", "conditioning a joint Gaussian"]
 domains: [probability, linear-algebra]
 status: seed

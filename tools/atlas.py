@@ -40,9 +40,9 @@ RELATIONS = {
 }
 SYMMETRIC = {k for k, v in RELATIONS.items() if k == v}
 STATUSES = {"seed", "draft", "stable"}
-REQUIRED = ["title", "aliases", "domains", "status"]
+REQUIRED = ["title", "essence", "aliases", "domains", "status"]
 LIST_KEYS = {"aliases", "domains", "sources", *RELATIONS}
-KNOWN_KEYS = {"title", "status", *LIST_KEYS}
+KNOWN_KEYS = {"title", "essence", "status", *LIST_KEYS}
 SLUG_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 # [[target]], [[target|label]], [[target#heading]], [[target^block]], ![[embed]]
 WIKILINK = re.compile(r"\[\[([^\]|#^]+)(?:[#^][^\]|]*)?(?:\|[^\]]*)?\]\]")
@@ -137,6 +137,8 @@ class Note:
         self.meta = meta or {}
         self.has_frontmatter = meta is not None
         self.title = str(self.meta.get("title") or self.slug)
+        essence = self.meta.get("essence")
+        self.essence = essence if isinstance(essence, str) else ""
         self.aliases = _as_list(self.meta.get("aliases"))
         self.domains = _as_list(self.meta.get("domains"))
         self.status = self.meta.get("status")
@@ -285,6 +287,7 @@ def cmd_new(a):
     def fmt(xs):
         return "[" + ", ".join(json.dumps(x, ensure_ascii=False) for x in xs) + "]"
 
+    text = text.replace('essence: ""', f"essence: {json.dumps(a.essence, ensure_ascii=False)}", 1)
     text = text.replace("aliases: []", f"aliases: {fmt(a.alias)}", 1)
     text = text.replace("domains: []", f"domains: {fmt(a.domain)}", 1)
     path.write_text(text, encoding="utf-8")
@@ -313,6 +316,8 @@ def cmd_show(a):
         return 1
     key = note.slug.lower()
     print(f"{note.title}  [{note.slug}]  status={note.status}")
+    if note.essence:
+        print(f"  essence: {note.essence}")
     if note.aliases:
         print(f"  aliases: {', '.join(note.aliases)}")
     if note.domains:
@@ -451,6 +456,8 @@ def cmd_lint(a):
         for key in REQUIRED:
             if key not in n.meta:
                 errs.append((f, f"missing key '{key}'"))
+        if "essence" in n.meta and not n.essence:
+            errs.append((f, "essence must be a one-sentence string"))
         for key in n.meta:
             if key not in KNOWN_KEYS:
                 warns.append((f, f"unknown frontmatter key '{key}' (relation types: {', '.join(RELATIONS)})"))
@@ -506,7 +513,8 @@ def cmd_graph(a):
     notes, _ = load()
     nodes, edges, seen = [], [], set()
     for k, n in notes.items():
-        nodes.append({"id": k, "title": n.title, "aliases": n.aliases, "domains": n.domains,
+        nodes.append({"id": k, "title": n.title, "essence": n.essence, "aliases": n.aliases,
+                      "domains": n.domains,
                       "status": n.status, "exists": True})
         seen.add(k)
         for rel, ts in n.relations.items():
@@ -536,6 +544,7 @@ def main(argv=None) -> int:
     s = sub.add_parser("new", help="create a concept from the template")
     s.add_argument("title")
     s.add_argument("--slug")
+    s.add_argument("--essence", default="", help="one-sentence summary")
     s.add_argument("--alias", action="append", default=[])
     s.add_argument("--domain", action="append", default=[])
     s.add_argument("--force", action="store_true", help="create despite likely duplicates")

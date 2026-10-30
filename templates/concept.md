@@ -1,5 +1,6 @@
 ---
 title: "{{title}}"
+essence: ""
 aliases: []
 domains: []
 status: seed

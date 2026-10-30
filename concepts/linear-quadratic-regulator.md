@@ -1,5 +1,6 @@
 ---
 title: Linear-quadratic regulator
+essence: "For linear dynamics and quadratic cost, the optimal control is a linear feedback on the state, computed from a Riccati recursion."
 aliases: ["LQR"]
 domains: [control, optimization]
 status: seed
