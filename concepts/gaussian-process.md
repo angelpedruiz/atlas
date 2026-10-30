@@ -14,6 +14,11 @@ sources:
 
 # Gaussian process
 
+$$
+\Large
+f \sim \mathcal{GP}(\underbrace{m}_{\text{mean function}},\ \underbrace{k}_{\text{kernel}})
+$$
+
 ## Intuition
 A prior over functions specified only by how function values co-vary: the kernel says "inputs that are similar have similar outputs". Any finite set of function values is jointly Gaussian, so learning from data is just conditioning a big Gaussian, and the posterior comes with calibrated error bars for free.
 

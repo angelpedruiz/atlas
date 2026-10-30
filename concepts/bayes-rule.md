@@ -11,6 +11,11 @@ sources:
 
 # Bayes' rule
 
+$$
+\Large
+\underbrace{p(\theta \mid y)}_{\text{posterior}} = \frac{\overbrace{p(y \mid \theta)}^{\text{likelihood}}\; \overbrace{p(\theta)}^{\text{prior}}}{\underbrace{p(y)}_{\text{evidence}}}
+$$
+
 ## Intuition
 We usually know how data arise from a hypothesis, but want the reverse: how plausible each hypothesis is given the data. The posterior is the prior reweighted by how well each hypothesis explains what was observed, then renormalised.
 

@@ -12,6 +12,11 @@ sources:
 
 # Bayesian filtering
 
+$$
+\Large
+p(\underbrace{x_t}_{\text{hidden state}} \mid \underbrace{y_{1:t}}_{\text{measurements so far}})
+$$
+
 ## Intuition
 A hidden state evolves and we see noisy glimpses of it. Keep a belief over the state and alternate two moves: let the belief drift and spread according to the dynamics, then sharpen it with Bayes' rule when a measurement arrives. The belief at time $t$ summarises all past data, so nothing else needs to be stored.
 

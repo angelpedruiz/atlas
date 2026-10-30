@@ -11,6 +11,11 @@ sources:
 
 # Gaussian conditioning
 
+$$
+\large
+a \mid b \sim \mathcal{N}\big(\underbrace{\mu_a + \Sigma_{ab}\Sigma_{bb}^{-1}(b - \mu_b)}_{\text{shifted mean}},\ \underbrace{\Sigma_{aa} - \Sigma_{ab}\Sigma_{bb}^{-1}\Sigma_{ba}}_{\text{reduced covariance}}\big)
+$$
+
 ## Intuition
 Observing part of a jointly Gaussian vector moves the mean of the rest along the regression line and shrinks its covariance by the part the observation explains. The result is again Gaussian, and how much the uncertainty shrinks does not depend on the value observed, only on the fact that it was observed.
 

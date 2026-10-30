@@ -11,6 +11,11 @@ sources:
 
 # Kernel ridge regression
 
+$$
+\Large
+\hat f(x_*) = \underbrace{k_{*X}}_{\text{similarity to data}}\ \underbrace{(K_{XX} + \lambda I)^{-1} y}_{\text{weights}}
+$$
+
 ## Intuition
 Fit a function to data while paying for its complexity, where the kernel decides what complex means. Even though the search runs over a possibly infinite-dimensional function space, the answer only ever needs one weight per training point, so the problem reduces to a linear solve.
 

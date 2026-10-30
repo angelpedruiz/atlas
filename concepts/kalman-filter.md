@@ -15,6 +15,11 @@ sources:
 
 # Kalman filter
 
+$$
+\Large
+x_t \mid y_{1:t} \sim \mathcal{N}(\underbrace{\hat x_{t\mid t}}_{\text{estimate}},\ \underbrace{P_{t\mid t}}_{\text{covariance}})
+$$
+
 ## Intuition
 Track the hidden state of a linear system from noisy measurements by carrying a Gaussian belief. Push it through the dynamics (the mean moves, the uncertainty grows by $Q$), then blend in the measurement with a weight set by how uncertain the prediction is relative to the sensor. Because everything stays Gaussian, a mean and a covariance are the entire belief.
 

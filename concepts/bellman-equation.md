@@ -14,6 +14,11 @@ sources:
 
 # Bellman equation
 
+$$
+\Large
+V^*(x) = \min_u \big[ \underbrace{\ell(x, u)}_{\text{cost now}} + \gamma\, \underbrace{\mathbb{E}[V^*(x') \mid x, u]}_{\text{value of next state}} \big]
+$$
+
 ## Intuition
 The tail of an optimal plan is itself optimal from wherever it starts. So the value of a state is the best one-step cost plus the value of where you land, which turns a search over whole trajectories into a recursion over states.
 

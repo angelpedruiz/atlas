@@ -14,6 +14,11 @@ sources:
 
 # Linear-quadratic regulator
 
+$$
+\Large
+u_t = -\underbrace{F_t}_{\text{feedback gain}}\ \underbrace{x_t}_{\text{state}}
+$$
+
 ## Intuition
 For a linear system penalised quadratically on state deviation and control effort, the optimal policy is a fixed linear feedback. $Q$ versus $R$ trades how fast you converge against how hard you push. Everything is solvable because a quadratic value function stays quadratic under the Bellman backup.
 
