@@ -83,12 +83,17 @@ Add a new relation type only with Angel's approval, and register it in
 
 ```
 # <title>
+$$ \Large ... $$   — the main object, centred, each term labelled
 ## Intuition        — 2–5 sentences, Angel's words; the picture to keep in mind
 ## Definition       — formal statement in house notation
 ## Key results      — the facts worth remembering, each one line + equation if needed
 ## Connections      — prose for each typed edge and notable untyped link
 ## Open questions   — what isn't understood yet
 ```
+
+Open with the concept's main object when it has one: a display math block right
+under the title, using `\Large` (`\large` if it would overflow) and `\underbrace`
+to label each term in plain words. It should be visible on opening the note.
 
 This skeleton is a starting point, not a schema, and the template stays deliberately
 loose for now: add, rename, drop or reorder sections to fit the concept. Only
