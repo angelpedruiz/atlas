@@ -29,9 +29,12 @@ commit as any change that moves a line here.
 - **Required core.** The purpose makes relations prose optional, while `AGENTS.md`
   (invariants 3 and 6) relies on `## Connections`. Keep it as a convention, or move
   the prose requirement to `equivalent_to` links only?
-- **Agents and intuition.** The purpose says agents never rewrite the intuition.
-  `AGENTS.md` invariant 5 lets agents draft it in new `seed` notes. Is a first draft
-  allowed, or should agents leave it blank?
+
+## Agreed
+
+- **Agents and intuition.** Agents may draft the intuition in new `seed` notes, but
+  never rewrite an existing one. Angel verifies and corrects agent changes before
+  they reach `main`.
 
 ## Known problems
 

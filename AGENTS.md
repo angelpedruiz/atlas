@@ -34,6 +34,8 @@ Tooling: `python3 tools/atlas.py <command>` (stdlib only). Run `--help` for deta
    Intuition; leave a suggestion as an Obsidian comment
    `%% agent: ... %%` (hidden in reading view) or in the commit message.
    Other sections may be extended, but do not delete Angel's text without asking.
+   Agent changes are proposals: work on a branch, and Angel verifies and corrects
+   them before they reach `main`.
 6. **Link densely, type the important edges.** Every new note links to ≥ 2 existing
    notes. Typed relations go in frontmatter (vocabulary below); the prose in
    `## Connections` says *why*. Declare each typed edge once, on either side —

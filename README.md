@@ -41,8 +41,8 @@ atlas lint                                # schema and link checks
 atlas graph > graph.json                  # for agents or a future custom viewer
 ```
 
-Note lifecycle: `seed` (agent draft) → `draft` (I've rewritten the intuition) →
-`stable`. Typed relations (`requires`, `special_case_of`, `equivalent_to`,
+Note lifecycle: `seed` (agent draft) → `draft` (I've verified and corrected it) →
+`stable`. Agent changes stay on a branch until I've reviewed them. Typed relations (`requires`, `special_case_of`, `equivalent_to`,
 `analogous_to`, `contrasts_with`) live in frontmatter; see `AGENTS.md`.
 
 ## How understanding is versioned
