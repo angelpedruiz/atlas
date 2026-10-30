@@ -10,9 +10,11 @@
 }
 
 /* figures: SVGs are drawn in black on transparent, and dark themes invert them */
-img[src*=".svg"] {
-  display: block;
-  margin-inline: auto;
+/* the embed wrapper shrinks to the image, so centre inside the wrapper */
+.image-embed:has(img[src*=".svg"]) {
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
 }
 
 .theme-dark img[src*=".svg"] {
