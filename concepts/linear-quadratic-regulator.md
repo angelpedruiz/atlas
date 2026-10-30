@@ -15,12 +15,9 @@ sources:
 # Linear-quadratic regulator
 
 $$
-\Large
+\LARGE
 u_t = -\underbrace{F_t}_{\text{feedback gain}}\ \underbrace{x_t}_{\text{state}}
 $$
-
-## Intuition
-For a linear system penalised quadratically on state deviation and control effort, the optimal policy is a fixed linear feedback. $Q$ versus $R$ trades how fast you converge against how hard you push. Everything is solvable because a quadratic value function stays quadratic under the Bellman backup.
 
 ## Definition
 Finite horizon, discrete time:
@@ -36,6 +33,9 @@ $$
 P_t = Q + A^\top P_{t+1} A - A^\top P_{t+1} B (R + B^\top P_{t+1} B)^{-1} B^\top P_{t+1} A, \qquad P_T = Q_f,
 $$
 and optimal cost-to-go $V_t(x) = x^\top P_t x$.
+
+## Intuition
+For a linear system penalised quadratically on state deviation and control effort, the optimal policy is a fixed linear feedback. $Q$ versus $R$ trades how fast you converge against how hard you push. Everything is solvable because a quadratic value function stays quadratic under the Bellman backup.
 
 ## Key results
 - **Derivation.** Assume $V_{t+1}(x) = x^\top P_{t+1} x$, substitute into the Bellman equation, minimise the resulting quadratic in $u$: the minimiser is linear in $x$ and $V_t$ is again quadratic. Induction closes.

@@ -12,12 +12,9 @@ sources:
 # Bayes' rule
 
 $$
-\Large
+\LARGE
 \underbrace{p(\theta \mid y)}_{\text{posterior}} = \frac{\overbrace{p(y \mid \theta)}^{\text{likelihood}}\; \overbrace{p(\theta)}^{\text{prior}}}{\underbrace{p(y)}_{\text{evidence}}}
 $$
-
-## Intuition
-We usually know how data arise from a hypothesis, but want the reverse: how plausible each hypothesis is given the data. The posterior is the prior reweighted by how well each hypothesis explains what was observed, then renormalised.
 
 ## Definition
 For random variables $\theta$ and $y$ with densities,
@@ -25,6 +22,9 @@ $$
 p(\theta \mid y) = \frac{p(y \mid \theta)\, p(\theta)}{p(y)}, \qquad p(y) = \int p(y \mid \theta)\, p(\theta)\, d\theta .
 $$
 Prior $p(\theta)$; [[likelihood]] $p(y \mid \theta)$ read as a function of $\theta$; evidence (marginal likelihood) $p(y)$; posterior $p(\theta \mid y)$.
+
+## Intuition
+We usually know how data arise from a hypothesis, but want the reverse: how plausible each hypothesis is given the data. The posterior is the prior reweighted by how well each hypothesis explains what was observed, then renormalised.
 
 ## Key results
 - **Sequential updating.** If $y_1 \perp y_2 \mid \theta$, yesterday's posterior is today's prior: $p(\theta \mid y_{1:2}) \propto p(y_2 \mid \theta)\, p(\theta \mid y_1)$.

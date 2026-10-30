@@ -14,18 +14,18 @@ sources:
 
 # Gaussian process
 
+**Definition.** A random function $f$ is a *Gaussian process* with mean $m$ and kernel $k$, written
 $$
-\Large
+\LARGE
 f \sim \mathcal{GP}(\underbrace{m}_{\text{mean function}},\ \underbrace{k}_{\text{kernel}})
 $$
+if for every finite $X = \{x_1, \dots, x_n\}$, $f_X \sim \mathcal{N}(m_X, K_{XX})$ with $[K_{XX}]_{ij} = k(x_i, x_j)$.
 
 ## Intuition
 A prior over functions specified only by how function values co-vary: the kernel says "inputs that are similar have similar outputs". Any finite set of function values is jointly Gaussian, so learning from data is just conditioning a big Gaussian, and the posterior comes with calibrated error bars for free.
 
-## Definition
-$f \sim \mathcal{GP}(m, k)$ iff for every finite $X = \{x_1, \dots, x_n\}$, $f_X \sim \mathcal{N}(m_X, K_{XX})$ with $[K_{XX}]_{ij} = k(x_i, x_j)$.
-
-**Regression.** With $y = f_X + \varepsilon$, $\varepsilon \sim \mathcal{N}(0, \sigma^2 I)$ and $k_{*X} = [k(x_*, x_1), \dots, k(x_*, x_n)]$:
+## Regression
+With $y = f_X + \varepsilon$, $\varepsilon \sim \mathcal{N}(0, \sigma^2 I)$ and $k_{*X} = [k(x_*, x_1), \dots, k(x_*, x_n)]$:
 $$
 \mu_*(x_*) = m(x_*) + k_{*X}(K_{XX} + \sigma^2 I)^{-1}(y - m_X),
 $$

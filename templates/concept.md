@@ -10,12 +10,10 @@ sources: []
 
 # {{title}}
 
-%% Main object, if there is one: $$ \Large ... $$ with each term labelled by \underbrace. %%
+**Definition.** %% One sentence, then the object: $$ \LARGE ... $$ with terms labelled by \underbrace. %%
 
 ## Intuition
 %% Your words. 2–5 sentences: what problem it solves, the picture to keep in mind. %%
-
-## Definition
 
 ## Key results
 

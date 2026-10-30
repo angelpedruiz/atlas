@@ -16,9 +16,6 @@ $$
 a \mid b \sim \mathcal{N}\big(\underbrace{\mu_a + \Sigma_{ab}\Sigma_{bb}^{-1}(b - \mu_b)}_{\text{shifted mean}},\ \underbrace{\Sigma_{aa} - \Sigma_{ab}\Sigma_{bb}^{-1}\Sigma_{ba}}_{\text{reduced covariance}}\big)
 $$
 
-## Intuition
-Observing part of a jointly Gaussian vector moves the mean of the rest along the regression line and shrinks its covariance by the part the observation explains. The result is again Gaussian, and how much the uncertainty shrinks does not depend on the value observed, only on the fact that it was observed.
-
 ## Definition
 $$
 \begin{bmatrix} a \\ b \end{bmatrix} \sim \mathcal{N}\!\left(\begin{bmatrix} \mu_a \\ \mu_b \end{bmatrix}, \begin{bmatrix} \Sigma_{aa} & \Sigma_{ab} \\ \Sigma_{ba} & \Sigma_{bb} \end{bmatrix}\right)
@@ -29,6 +26,9 @@ $$
 \mu_{a\mid b} = \mu_a + \Sigma_{ab}\Sigma_{bb}^{-1}(b - \mu_b), \qquad
 \Sigma_{a\mid b} = \Sigma_{aa} - \Sigma_{ab}\Sigma_{bb}^{-1}\Sigma_{ba}.
 $$
+
+## Intuition
+Observing part of a jointly Gaussian vector moves the mean of the rest along the regression line and shrinks its covariance by the part the observation explains. The result is again Gaussian, and how much the uncertainty shrinks does not depend on the value observed, only on the fact that it was observed.
 
 ## Key results
 - $\Sigma_{a\mid b}$ is the Schur complement of $\Sigma_{bb}$ and is independent of the observed $b$, so posterior uncertainty can be computed before any data arrive.

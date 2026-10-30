@@ -16,12 +16,9 @@ sources:
 # Kalman filter
 
 $$
-\Large
+\LARGE
 x_t \mid y_{1:t} \sim \mathcal{N}(\underbrace{\hat x_{t\mid t}}_{\text{estimate}},\ \underbrace{P_{t\mid t}}_{\text{covariance}})
 $$
-
-## Intuition
-Track the hidden state of a linear system from noisy measurements by carrying a Gaussian belief. Push it through the dynamics (the mean moves, the uncertainty grows by $Q$), then blend in the measurement with a weight set by how uncertain the prediction is relative to the sensor. Because everything stays Gaussian, a mean and a covariance are the entire belief.
 
 ## Definition
 Model:
@@ -42,6 +39,9 @@ $$
 \hat x_{t\mid t} = \hat x_{t\mid t-1} + K_t\,(y_t - C \hat x_{t\mid t-1}), \qquad
 P_{t\mid t} = (I - K_t C)\, P_{t\mid t-1}.
 $$
+
+## Intuition
+Track the hidden state of a linear system from noisy measurements by carrying a Gaussian belief. Push it through the dynamics (the mean moves, the uncertainty grows by $Q$), then blend in the measurement with a weight set by how uncertain the prediction is relative to the sensor. Because everything stays Gaussian, a mean and a covariance are the entire belief.
 
 ## Key results
 - Exact Bayesian filter for this model: $p(x_t \mid y_{1:t}) = \mathcal{N}(\hat x_{t\mid t}, P_{t\mid t})$, so $\hat x_{t\mid t}$ is the MMSE estimate.

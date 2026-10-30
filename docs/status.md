@@ -9,7 +9,9 @@ commit as any change that moves a line here.
 - Frontmatter with essence, aliases, domains, status and typed relations, checked by
   `atlas lint`.
 - Inline wikilinks with display text, resolved to the canonical slug.
-- Notes open with their main object: large, centred, with labelled terms.
+- Notes read like textbook entries: the definition comes first, with the main object
+  large, centred and labelled. `likelihood` and `gaussian-process` are in the full
+  format; the other notes still have a `## Definition` section.
 - Plain-text Git repo, with history as the record of understanding, public at
   <https://github.com/angelpedruiz/atlas>.
 - Obsidian vault configuration for editing.

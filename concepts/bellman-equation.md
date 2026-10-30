@@ -19,9 +19,6 @@ $$
 V^*(x) = \min_u \big[ \underbrace{\ell(x, u)}_{\text{cost now}} + \gamma\, \underbrace{\mathbb{E}[V^*(x') \mid x, u]}_{\text{value of next state}} \big]
 $$
 
-## Intuition
-The tail of an optimal plan is itself optimal from wherever it starts. So the value of a state is the best one-step cost plus the value of where you land, which turns a search over whole trajectories into a recursion over states.
-
 ## Definition
 Cost-minimisation convention (see notation). Finite horizon, deterministic:
 $$
@@ -35,6 +32,9 @@ $$
 Q^*(x, u) = \ell(x, u) + \gamma\, \mathbb{E}\Big[ \min_{u'} Q^*(x', u') \;\Big|\; x, u \Big].
 $$
 RL form: $r = -\ell$ and $\min \to \max$.
+
+## Intuition
+The tail of an optimal plan is itself optimal from wherever it starts. So the value of a state is the best one-step cost plus the value of where you land, which turns a search over whole trajectories into a recursion over states.
 
 ## Key results
 - The Bellman operator $\mathcal{T}$ is a $\gamma$-contraction in $\lVert\cdot\rVert_\infty$: unique fixed point $V^*$, and value iteration converges geometrically (Banach).
