@@ -31,6 +31,8 @@ This is an initial proposal: change anything, and note the change in the commit.
 | joint blocks | $\Sigma_{ab}$ | block of $\operatorname{Cov}[(a,b)]$ |
 | Gaussian process | $f \sim \mathcal{GP}(m, k)$ | |
 | kernel, Gram matrix | $k(x,x')$, $K_{XX}$, $k_{*X}$ | Gram matrix always carries set subscripts |
+| reproducing kernel Hilbert space | $\mathcal{H}_k$, norm $\lVert f \rVert_{\mathcal{H}_k}$ | |
+| regularisation weight | $\lambda$ | |
 
 ## Dynamical systems, estimation, control
 
