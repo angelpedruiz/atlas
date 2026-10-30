@@ -1,0 +1,13 @@
+#!/bin/sh
+# Knowledge Atlas pre-commit: refuse commits that break the schema or link rules.
+# Enable once per clone:  git config core.hooksPath tools/hooks
+ROOT="$(git rev-parse --show-toplevel)"
+PY="$(command -v python3 || command -v python)"
+if [ -z "$PY" ]; then
+  echo "atlas pre-commit: python not found, skipping lint" >&2
+  exit 0
+fi
+"$PY" "$ROOT/tools/atlas.py" lint || {
+  echo "atlas lint failed — fix the errors above (or commit with --no-verify)." >&2
+  exit 1
+}

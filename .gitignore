@@ -1,0 +1,9 @@
+# Obsidian per-device state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+# OS / tooling
+.DS_Store
+__pycache__/
+*.pyc

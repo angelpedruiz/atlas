@@ -1,0 +1,19 @@
+{
+  "newFileLocation": "folder",
+  "newFileFolderPath": "concepts",
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "assets",
+  "showFrontmatter": true,
+  "propertiesInDocument": "visible",
+  "userIgnoreFilters": [
+    "templates/",
+    "_inbox/",
+    "tools/",
+    "notation/",
+    "README.md",
+    "AGENTS.md",
+    "CLAUDE.md"
+  ]
+}

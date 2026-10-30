@@ -1,0 +1,14 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "title": "text",
+    "domains": "multitext",
+    "status": "text",
+    "requires": "multitext",
+    "special_case_of": "multitext",
+    "equivalent_to": "multitext",
+    "analogous_to": "multitext",
+    "contrasts_with": "multitext",
+    "sources": "multitext"
+  }
+}
